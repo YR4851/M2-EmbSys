@@ -1,6 +1,6 @@
 # M2-EmbSys
 
-## Case Study 1: Electric Toaster
+## Case Study 1: ELECTRIC TOASTER
 
 ![TOASTER FLOWCHART](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/CaseStudy/FLOWCHART_TOASTER.png)
 
