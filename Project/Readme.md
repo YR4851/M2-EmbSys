@@ -8,7 +8,7 @@
    * Description
    * features
    * Working state of art
-   * S.W.O.T and 5W's & 1H analysis
+   * S.W.O.T and 5W & 1H analysis
 2. Requirements
    * High level requirements
    * Low level requirements
@@ -42,5 +42,6 @@
    * LED's shall be provided for the funtioning display of embedded system.
    ## Working state of art:
    The main focus of this project is to control the tempereature and humidity of a perticular room in which it is being implimented with the help of sensors and the microcontroller. Here an LCD display is being used to display some information for user interfacing purpose. As if we see the growth of the technology around us, these types of technologies are the becoming the future of these industries.
-   ## SWOT:
-   
+   ## SWOT and 5W & 1H:
+   ![SWOT analysis](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/1_Requirements/Screenshot%20(107).png)
+   ![5W & 1H]()
