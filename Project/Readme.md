@@ -130,7 +130,7 @@
 
   ## Sturctural diagram:
   
-  ![Structural diagram]()
+  ![Structural diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(113).png)
   
   ## Behavioural diagram:
    ### Flow chart:
