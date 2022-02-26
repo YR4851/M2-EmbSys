@@ -12,8 +12,9 @@
 2. Requirements
    * High level requirements
    * Low level requirements
-3. Block Diagram and Blocks explination
-   * Block Diagram
+3. Block Diagram 
+   * Block diagram
+   * Flow chart
    * Sensors
    * Actuators
    * Micro controller and memory
@@ -30,7 +31,7 @@
    * Low level test plan
 6. Application
 
-# 1 ABOUT THE PROJECT
+# 1. ABOUT THE PROJECT
    ## Description:
    This is an automation project which is used to control the speed of fan automatically with the help of an temperature sensor which is used to sense the temperature here and sends the data forward by which means the fan speed is controlled to maintain a specific temperature at a pre-defined value of it.
 
@@ -46,3 +47,34 @@
    ![SWOT analysis](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/1_Requirements/Screenshot%20(107).png)
    ## 5W & 1H
    ![5W & 1H](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/1_Requirements/Screenshot%20(108).png)
+   
+# 2. REQUIREMENTS
+  ## High level requirements:
+
+  | ID | Description | 
+  | ----- | ----- | 
+  | HR01 | system shall control fan speed by sensing the temperature. |
+  | HR02 | there shall be an LCD display for the user interfacing. |
+  | HR03 | LED's shall be used for showing the status of the system. |
+  | HR04 | system shall sense the temerature and humidity. |
+
+  ## Low level requirements:
+
+
+  | ID | Description | HLR ID |
+  | ------ | --------- | ------ |
+  | LR01 | According to the values of the temperature the fan shall be controlled. | HR01 |
+  | LR02 | According to the values of temperature on/off status of fan shall be controlled. | HR01 |
+  | LR03 | LDC shall display the temperature of the room. | HR02 |
+  | LR04 | Fan speed shall be displayed on LCD screen. | HR02 |
+  | LR05 | Device shall pe placed in an appropriate place. | HR03 |
+  | LR06 | Device shall glow LED red when placed wrongly. | HR03 |
+  | LR07 | Temperature sensor shall detect the room temperature. | HR04 |
+  | LR06 | Temperature detected shall be displayed on the LCD screen. | HR04 |
+
+# 3. BLOCK DIAGRAM
+  ## Block diagram:
+  ![Block diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(110).png)
+  ## Flow chart:
+  ![flowchart](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(109).png)
+  
