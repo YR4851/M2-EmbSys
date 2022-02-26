@@ -19,12 +19,10 @@
    * Micro controller and memory
    * Flow chart
 4. Architecture
-   * Behavioural Diagram
-     * High Level Flow chart Behavioural Diagram
-     * Low Level Flow chart Behavioural Diagram
    * Structural Diagram
-     * High Level UML Use Case Structural Diagram
-     * Low Level UML Use Case Structural Diagram
+   * Behavioural Diagram
+     * Flowchart.
+     * UML diagram.
 5. Application
 
 # 1. ABOUT THE PROJECT
@@ -127,9 +125,21 @@
    ### Motor Driver Unit:
    
    * Helps in driving the motor for our fan by providing required power for them(we use motor driver L293).
-  ## Flow chart:
+
+# 4. ARCHITECTURE
+
+  ## Sturctural diagram:
+  
+  ![Structural diagram]()
+  
+  ## Behavioural diagram:
+   ### Flow chart:
   
   ![flowchart](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(109).png)
+  
+   ### UML diagram:
+   
+   ![UML diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(111).png)
   
 # 5. APPLICATIONS
 
