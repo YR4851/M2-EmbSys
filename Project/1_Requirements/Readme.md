@@ -2,7 +2,7 @@
 
    ## Description:
    
-   This is an automation project which is used to control the speed of fan automatically with the help of an temperature sensor which is used to sense the temperature here and sends the data forward by which means the fan speed is controlled to maintain a specific temperature at a pre-defined value of it.
+   Automated plant watering system is programmed using Arduino IDE software. Arduino microcontroller checks soil moisture level, if low, triggering a water pump on until sensor reaches threshold. After this, the system will re-check the soil moisture between periodic intervals to see if you need more water.
 
    ## Features:
    
@@ -30,21 +30,19 @@
 
   | ID | Description | 
   | ----- | ----- | 
-  | HR01 | system shall control fan speed by sensing the temperature. |
-  | HR02 | there shall be an LCD display for the user interfacing. |
-  | HR03 | LED's shall be used for showing the status of the system. |
-  | HR04 | system shall sense the temerature and humidity. |
+  | HR01 | It shall have a Microcontroller. |
+  | HR02 | It shall have Sensors. |
+  | HR03 | It shall have Switch. |
+  | HR04 | It shall have a Display. |
 
   ## Low level requirements:
 
 
-  | ID | Description | HLR ID |
-  | ------ | --------- | ------ |
-  | LR01 | According to the values of the temperature the fan shall be controlled. | HR01 |
-  | LR02 | According to the values of temperature on/off status of fan shall be controlled. | HR01 |
-  | LR03 | LDC shall display the temperature of the room. | HR02 |
-  | LR04 | Fan speed shall be displayed on LCD screen. | HR02 |
-  | LR05 | Device shall pe placed in an appropriate place. | HR03 |
-  | LR06 | Device shall glow LED red when placed wrongly. | HR03 |
-  | LR07 | Temperature sensor shall detect the room temperature. | HR04 |
-  | LR06 | Temperature detected shall be displayed on the LCD screen. | HR04 |
+  |LLR_ID|Low Level Requirements|
+  ---|---|
+ |HLR01_LLR01|It shall have a Microcontroller(ATmega32) to recieve/transmit the data|
+ |HLR02_LLR02|It shall have a Soil Moisture Sensor to detect the moisture in the soil|
+ |HLR02_LLR03|It shall have a Temperature and Humidity Sensor to detect the humidity in the air|
+ |HLR03_LLR04|It shall have a Relay Module which is used as an automatic switch|
+ |HLR03_LLR05|It shall have a LED which is uesd to blink when the switch ON|
+ |HLR04_LLR06|It shall have a 16x2 LCD which is used to display the moisture of the soil, humidity in  the air|
