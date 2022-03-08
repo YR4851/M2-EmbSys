@@ -78,7 +78,7 @@
 
   ## Block diagram:
   
-  ![Block diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/BLOCK_DIAGRAM.png.png)
+  ![Block diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/BLOCK_DIAGRAM.png)
   
   ## Sensor: 
   
@@ -128,16 +128,16 @@
 
   ## Sturctural diagram:
   
-  ![Structural diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/STRUCTURAL.png.png)
+  ![Structural diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/STRUCTURAL.png)
   
   ## Behavioural diagram:
    ### Flow chart:
   
-  ![flowchart](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/flowchart.png.png)
+  ![flowchart](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/flowchart.png)
   
    ### UML diagram:
    
-   ![UML diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/UML.png.png)
+   ![UML diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/UML.png)
   
 # 5. APPLICATIONS
 
