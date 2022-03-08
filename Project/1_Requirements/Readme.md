@@ -6,15 +6,15 @@
 
    ## Features:
    
-   * LCD Display shall be provided to know the temperature value we set.
-   * Room Temperature shall be displayed on LCD.
-   * Fan is on or off shall be displayed on LCD.
-   * Fan speed shall be displayed on LCD.
+   * LCD Display shall be provided to know the temperature value.
+   * soil Temperature shall be displayed on LCD.
+   * soil humidity shall be displayed on LCD.
+   * pump on or off status shall be displayed on LCD.
    * LED's shall be provided for the funtioning display of embedded system.
    
    ## Working state of art:
    
-   The main focus of this project is to control the tempereature and humidity of a perticular room in which it is being implimented with the help of sensors and the microcontroller. Here an LCD display is being used to display some information for user interfacing purpose. As if we see the growth of the technology around us, these types of technologies are the becoming the future of these industries.
+   The main focus of this project is to control the tempereature and humidity of a perticular soil in which it is being implimented with the help of sensors and the microcontroller. Here an LCD display is being used to display some information for user interfacing purpose. As if we see the growth of the technology around us, these types of technologies are the becoming the future of these industries.
    
    ## SWOT:
    
