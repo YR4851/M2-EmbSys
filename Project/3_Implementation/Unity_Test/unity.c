@@ -1,6 +1,6 @@
 /* =========================================================================
     Unity Project - A Test Framework for C
-    Copyright (c) 2007-19 Mike Karlesky, Mark VanderVoord, Greg Williams
+    Copyright (c) 2007-21 Mike Karlesky, Mark VanderVoord, Greg Williams
     [Released under MIT License. Please refer to license.txt for details]
 ============================================================================ */
 
@@ -19,9 +19,9 @@ void UNITY_OUTPUT_CHAR(int);
 #endif
 
 /* Helpful macros for us to use here in Assert functions */
-#define UNITY_FAIL_AND_BAIL   { Unity.CurrentTestFailed  = 1; UNITY_OUTPUT_FLUSH(); TEST_ABORT(); }
-#define UNITY_IGNORE_AND_BAIL { Unity.CurrentTestIgnored = 1; UNITY_OUTPUT_FLUSH(); TEST_ABORT(); }
-#define RETURN_IF_FAIL_OR_IGNORE if (Unity.CurrentTestFailed || Unity.CurrentTestIgnored) TEST_ABORT()
+#define UNITY_FAIL_AND_BAIL         do { Unity.CurrentTestFailed  = 1; UNITY_OUTPUT_FLUSH(); TEST_ABORT(); } while (0)
+#define UNITY_IGNORE_AND_BAIL       do { Unity.CurrentTestIgnored = 1; UNITY_OUTPUT_FLUSH(); TEST_ABORT(); } while (0)
+#define RETURN_IF_FAIL_OR_IGNORE    do { if (Unity.CurrentTestFailed || Unity.CurrentTestIgnored) { TEST_ABORT(); } } while (0)
 
 struct UNITY_STORAGE_T Unity;
 
@@ -67,9 +67,10 @@ static const char PROGMEM UnityStrBreaker[]                = "------------------
 static const char PROGMEM UnityStrResultsTests[]           = " Tests ";
 static const char PROGMEM UnityStrResultsFailures[]        = " Failures ";
 static const char PROGMEM UnityStrResultsIgnored[]         = " Ignored ";
+#ifndef UNITY_EXCLUDE_DETAILS
 static const char PROGMEM UnityStrDetail1Name[]            = UNITY_DETAIL1_NAME " ";
 static const char PROGMEM UnityStrDetail2Name[]            = " " UNITY_DETAIL2_NAME " ";
-
+#endif
 /*-----------------------------------------------
  * Pretty Printers & Test Result Output Handlers
  *-----------------------------------------------*/
@@ -368,10 +369,12 @@ void UnityPrintFloat(const UNITY_DOUBLE input_number)
     }
     else
     {
-        UNITY_INT32 n_int = 0, n;
-        int exponent = 0;
-        int decimals, digits;
-        char buf[16] = {0};
+        UNITY_INT32 n_int = 0;
+        UNITY_INT32 n;
+        int         exponent = 0;
+        int         decimals;
+        int         digits;
+        char        buf[16] = {0};
 
         /*
          * Scale up or down by powers of 10.  To minimize rounding error,
@@ -444,14 +447,19 @@ void UnityPrintFloat(const UNITY_DOUBLE input_number)
 
         /* build up buffer in reverse order */
         digits = 0;
-        while ((n != 0) || (digits < (decimals + 1)))
+        while ((n != 0) || (digits <= decimals))
         {
             buf[digits++] = (char)('0' + n % 10);
             n /= 10;
         }
+
+        /* print out buffer (backwards) */
         while (digits > 0)
         {
-            if (digits == decimals) { UNITY_OUTPUT_CHAR('.'); }
+            if (digits == decimals)
+            {
+                UNITY_OUTPUT_CHAR('.');
+            }
             UNITY_OUTPUT_CHAR(buf[--digits]);
         }
 
@@ -764,11 +772,12 @@ void UnityAssertGreaterOrLessOrEqualNumber(const UNITY_INT threshold,
 }
 
 #define UnityPrintPointlessAndBail()       \
-{                                          \
+do {                                       \
     UnityTestResultsFailBegin(lineNumber); \
     UnityPrint(UnityStrPointless);         \
     UnityAddMsgIfSpecified(msg);           \
-    UNITY_FAIL_AND_BAIL; }
+    UNITY_FAIL_AND_BAIL;                   \
+} while (0)
 
 /*-----------------------------------------------*/
 void UnityAssertEqualIntArray(UNITY_INTERNAL_PTR expected,
@@ -883,11 +892,12 @@ void UnityAssertEqualIntArray(UNITY_INTERNAL_PTR expected,
 
 #ifndef UNITY_EXCLUDE_FLOAT_PRINT
   #define UNITY_PRINT_EXPECTED_AND_ACTUAL_FLOAT(expected, actual) \
-  {                                                               \
+  do {                                                            \
     UnityPrint(UnityStrExpected);                                 \
     UnityPrintFloat(expected);                                    \
     UnityPrint(UnityStrWas);                                      \
-    UnityPrintFloat(actual); }
+    UnityPrintFloat(actual);                                      \
+  } while (0)
 #else
   #define UNITY_PRINT_EXPECTED_AND_ACTUAL_FLOAT(expected, actual) \
     UnityPrint(UnityStrDelta)
@@ -1001,8 +1011,7 @@ void UnityAssertFloatSpecial(const UNITY_FLOAT actual,
             is_trait = !isinf(actual) && !isnan(actual);
             break;
 
-        case UNITY_FLOAT_INVALID_TRAIT:
-        default:
+        default: /* including UNITY_FLOAT_INVALID_TRAIT */
             trait_index = 0;
             trait_names[0] = UnityStrInvalidFloatTrait;
             break;
@@ -1142,8 +1151,7 @@ void UnityAssertDoubleSpecial(const UNITY_DOUBLE actual,
             is_trait = !isinf(actual) && !isnan(actual);
             break;
 
-        case UNITY_FLOAT_INVALID_TRAIT:
-        default:
+        default: /* including UNITY_FLOAT_INVALID_TRAIT */
             trait_index = 0;
             trait_names[0] = UnityStrInvalidFloatTrait;
             break;
