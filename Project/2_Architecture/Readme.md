@@ -1,9 +1,11 @@
 
 # ARCHITECTURE
 
+  # BLOCK DIAGRAM
+
   ## Block diagram:
   
-  ![Block diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(110).png)
+  ![Block diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/BLOCK_DIAGRAM.png)
   
   ## Sensor: 
   
@@ -11,7 +13,15 @@
    
    * This Thermistor is a resistor whose resistance is dependent on temperature here this change in resistence produces change in voltage, this voltage is taken as input to micro controller.
    
+   ### Soil moisture sensor:
+   
+   * Soil moisture sensors measure the volumetric water content in soil. Since the direct gravimetric measurement of free soil moisture requires removing, drying, and weighing of a sample, soil moisture sensors measure the volumetric water content indirectly by using some other property of the soil, such as electrical resistance, dielectric constant, or interaction with neutrons, as a proxy for the moisture content.
+   
   ## Actuators:
+  
+   ### Relay:
+   
+   * A relay is an electrically operated switch. It consists of a set of input terminals for a single or multiple control signals, and a set of operating contact terminals. 
   
    ### LCD Display:
    
@@ -20,14 +30,6 @@
    ### LED's:
    
    * LED displays the on and off status of the device.
-   
-   ### Fan:
-   
-   * Temperature inside room is controlled by fan.
-   
-   ### Motor driver:
-   
-   * Helps in controlling motor of the fan.
    
   ## MICRO CONTROLLER AND MEMORY
   
@@ -45,20 +47,21 @@
    
   ## SUBSYSTEM & OTHERS
   
-   ### Motor Driver Unit:
+   ### Relay Module:
    
-   * Helps in driving the motor for our fan by providing required power for them(we use motor driver L293).
+   * A 5v relay is an automatic switch that is commonly used in an automatic control circuit and to control a high-current using a low-current signal. The input voltage of the relay signal ranges from 0 to 5V.
+
+# ARCHITECTURE
+
   ## Sturctural diagram:
   
-  ![Structural diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(113).png)
+  ![Structural diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/STRUCTURAL.png)
   
   ## Behavioural diagram:
    ### Flow chart:
   
-  ![flowchart](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(109).png)
+  ![flowchart](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/flowchart.png)
   
    ### UML diagram:
    
-   ![UML diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(111).png)
-   
-   
+   ![UML diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/UML.png)
