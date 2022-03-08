@@ -23,25 +23,25 @@
    * Behavioural Diagram
      * Flowchart.
      * UML diagram.
-5. Application
+5. Application and Advantages
 
 # 1. ABOUT THE PROJECT
 
    ## Description:
    
-   This is an automation project which is used to control the speed of fan automatically with the help of an temperature sensor which is used to sense the temperature here and sends the data forward by which means the fan speed is controlled to maintain a specific temperature at a pre-defined value of it.
+   Automated plant watering system is programmed using Arduino IDE software. Arduino microcontroller checks soil moisture level, if low, triggering a water pump on until sensor reaches threshold. After this, the system will re-check the soil moisture between periodic intervals to see if you need more water.
 
    ## Features:
    
-   * LCD Display shall be provided to know the temperature value we set.
-   * Room Temperature shall be displayed on LCD.
-   * Fan is on or off shall be displayed on LCD.
-   * Fan speed shall be displayed on LCD.
+   * LCD Display shall be provided to know the temperature value.
+   * soil Temperature shall be displayed on LCD.
+   * soil humidity shall be displayed on LCD.
+   * pump on or off status shall be displayed on LCD.
    * LED's shall be provided for the funtioning display of embedded system.
    
    ## Working state of art:
    
-   The main focus of this project is to control the tempereature and humidity of a perticular room in which it is being implimented with the help of sensors and the microcontroller. Here an LCD display is being used to display some information for user interfacing purpose. As if we see the growth of the technology around us, these types of technologies are the becoming the future of these industries.
+   The main focus of this project is to control the tempereature and humidity of a perticular soil in which it is being implimented with the help of sensors and the microcontroller. Here an LCD display is being used to display some information for user interfacing purpose. As if we see the growth of the technology around us, these types of technologies are the becoming the future of these industries.
    
    ## SWOT:
    
@@ -57,30 +57,28 @@
 
   | ID | Description | 
   | ----- | ----- | 
-  | HR01 | system shall control fan speed by sensing the temperature. |
-  | HR02 | there shall be an LCD display for the user interfacing. |
-  | HR03 | LED's shall be used for showing the status of the system. |
-  | HR04 | system shall sense the temerature and humidity. |
+  | HR01 | It shall have a Microcontroller. |
+  | HR02 | It shall have Sensors. |
+  | HR03 | It shall have Switch. |
+  | HR04 | It shall have a Display. |
 
   ## Low level requirements:
 
 
-  | ID | Description | HLR ID |
-  | ------ | --------- | ------ |
-  | LR01 | According to the values of the temperature the fan shall be controlled. | HR01 |
-  | LR02 | According to the values of temperature on/off status of fan shall be controlled. | HR01 |
-  | LR03 | LDC shall display the temperature of the room. | HR02 |
-  | LR04 | Fan speed shall be displayed on LCD screen. | HR02 |
-  | LR05 | Device shall pe placed in an appropriate place. | HR03 |
-  | LR06 | Device shall glow LED red when placed wrongly. | HR03 |
-  | LR07 | Temperature sensor shall detect the room temperature. | HR04 |
-  | LR06 | Temperature detected shall be displayed on the LCD screen. | HR04 |
+  |LLR_ID|Low Level Requirements|
+  ---|---|
+ |HLR01_LLR01|It shall have a Microcontroller(ATmega32) to recieve/transmit the data|
+ |HLR02_LLR02|It shall have a Soil Moisture Sensor to detect the moisture in the soil|
+ |HLR02_LLR03|It shall have a Temperature and Humidity Sensor to detect the humidity in the air|
+ |HLR03_LLR04|It shall have a Relay Module which is used as an automatic switch|
+ |HLR03_LLR05|It shall have a LED which is uesd to blink when the switch ON|
+ |HLR04_LLR06|It shall have a 16x2 LCD which is used to display the moisture of the soil, humidity in  the air|
 
 # 3. BLOCK DIAGRAM
 
   ## Block diagram:
   
-  ![Block diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(110).png)
+  ![Block diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/BLOCK_DIAGRAM.png.png)
   
   ## Sensor: 
   
@@ -88,7 +86,15 @@
    
    * This Thermistor is a resistor whose resistance is dependent on temperature here this change in resistence produces change in voltage, this voltage is taken as input to micro controller.
    
+   ### Soil moisture sensor:
+   
+   * Soil moisture sensors measure the volumetric water content in soil. Since the direct gravimetric measurement of free soil moisture requires removing, drying, and weighing of a sample, soil moisture sensors measure the volumetric water content indirectly by using some other property of the soil, such as electrical resistance, dielectric constant, or interaction with neutrons, as a proxy for the moisture content.
+   
   ## Actuators:
+  
+   ### Relay:
+   
+   * A relay is an electrically operated switch. It consists of a set of input terminals for a single or multiple control signals, and a set of operating contact terminals. 
   
    ### LCD Display:
    
@@ -97,14 +103,6 @@
    ### LED's:
    
    * LED displays the on and off status of the device.
-   
-   ### Fan:
-   
-   * Temperature inside room is controlled by fan.
-   
-   ### Motor driver:
-   
-   * Helps in controlling motor of the fan.
    
   ## MICRO CONTROLLER AND MEMORY
   
@@ -122,31 +120,33 @@
    
   ## SUBSYSTEM & OTHERS
   
-   ### Motor Driver Unit:
+   ### Relay Module:
    
-   * Helps in driving the motor for our fan by providing required power for them(we use motor driver L293).
+   * A 5v relay is an automatic switch that is commonly used in an automatic control circuit and to control a high-current using a low-current signal. The input voltage of the relay signal ranges from 0 to 5V.
 
 # 4. ARCHITECTURE
 
   ## Sturctural diagram:
   
-  ![Structural diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(113).png)
+  ![Structural diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/STRUCTURAL.png.png)
   
   ## Behavioural diagram:
    ### Flow chart:
   
-  ![flowchart](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(109).png)
+  ![flowchart](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/flowchart.png.png)
   
    ### UML diagram:
    
-   ![UML diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/2_Architecture/Screenshot%20(111).png)
+   ![UML diagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/UML.png.png)
   
 # 5. APPLICATIONS
 
-* This system can be used in Automation of Houses,Industries,Stadiums etc...
-* This system can be used in Fan Control of Houses,Industries,Stadiums etc...
-* This system can be used in Automatic Temperature Detector of Houses,Industries,Stadiums etc...
-* This system can be used to know number of fans "On" status of Houses,Industries,Stadiums etc...
-
+- It can be used in Home Gardening.
+- It can be used in Agriculture Sector.
+- 
+    ## Advantages:
+    - Just the right amount of water will be released.
+    - The water will be directed to exactly where it is needed. 
+    - An automatic shut off can help to keep water usage to a minimum.
 # 6. REFERENCE
 * http://www.electronicwings.com
