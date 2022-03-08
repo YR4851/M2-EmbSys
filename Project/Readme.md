@@ -4,7 +4,7 @@
 
 # SIMULATION PICTURE
 
- ## ![simlu.ation](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/simul.ation.png)
+ ## ![circuitDiagram](https://raw.githubusercontent.com/YR4851/M2-EmbSys/main/Project/7_ImagesAndVideos/circuitDiagram.png)
  
  ## Reference:
  http://www.electronicwings.com
