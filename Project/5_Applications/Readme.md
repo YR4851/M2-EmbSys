@@ -1,6 +1,10 @@
-# APPLICATIONS
 
-* This system can be used in Automation of Houses,Industries,Stadiums etc...
-* This system can be used in Fan Control of Houses,Industries,Stadiums etc...
-* This system can be used in Automatic Temperature Detector of Houses,Industries,Stadiums etc...
-* This system can be used to know number of fans "On" status of Houses,Industries,Stadiums etc...
+# 5. APPLICATIONS & ADVANTAGES
+
+- It can be used in Home Gardening.
+- It can be used in Agriculture Sector.
+- 
+    ## Advantages:
+    - Just the right amount of water will be released.
+    - The water will be directed to exactly where it is needed. 
+    - An automatic shut off can help to keep water usage to a minimum.
